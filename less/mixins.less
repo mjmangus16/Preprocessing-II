@@ -1,7 +1,20 @@
 // Mixins in here
 
-.flexSpaceBetween {
+.flexSpaceBetween(@justify, @align) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.buttonStyle(@color, @radius, @width) {
+  background-color: @color;
+  border-radius: @radius;
+  width: @width;
+  height: 40px;
+  color: @main-bg;
+}
+
+.mobileWidth(@width) {
+  width: @width;
+  margin: 10px auto;
 }

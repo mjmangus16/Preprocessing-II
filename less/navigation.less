@@ -5,14 +5,17 @@ header {
   border-bottom: 2px dashed @navigation-border;
 
   div {
-    .flexSpaceBetween();
+    .flexSpaceBetween(space-between, center);
     height: 75px;
-
     max-width: 800px;
     margin: auto;
 
+    @media @mobile {
+      flex-direction: column;
+    }
+
     nav {
-      .flexSpaceBetween();
+      .flexSpaceBetween(space-around, center);
       font-size: 1.5rem;
 
       a {
