@@ -14,12 +14,23 @@ header {
       flex-direction: column;
     }
 
+    h1 {
+      @media @mobile {
+        margin-top: 10px;
+      }
+    }
+
     nav {
       .flexSpaceBetween(space-around, center);
       font-size: 1.5rem;
 
       a {
         padding: 0px 25px;
+
+        @media @mobile {
+          font-size: 1.25rem;
+          padding: 5px 25px;
+        }
       }
     }
   }
